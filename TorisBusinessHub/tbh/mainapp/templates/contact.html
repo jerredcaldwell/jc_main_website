@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block active %}    
+<div class="collapse navbar-collapse navbar-dropdown" id="myNavbar">
+  <ul class="nav navbar-nav">
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <li><a href="{% url 'career' %}">Career</a></li>
+    <li><a href="{% url 'hobbies' %}">Hobbies</a></li>
+    <li class="active"><a href="{% url 'contact' %}">Contact</a></li>
+    <li><a href="{% url 'login' %}">Login</a></li>
+  </ul>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<div class="container-fluid content floating-box">
+  <img class="logo_inv_1" src="{% static "assets/jc_logo_inv.png"%}" alt="Inv Logo">
+    <h2 style="padding-bottom: 10px;" class="centered-text">Reach out and say hello!</h3>
+    <h4 class="centered-text">contact@jerredcaldwell.com</h4>
+    <h4 class="centered-text">github.com/jerredcaldwell</h4>
+    <h4 class="centered-text">linkedin.com/in/jerred-caldwell</h4>
+      
+</div>
+{% endblock %}

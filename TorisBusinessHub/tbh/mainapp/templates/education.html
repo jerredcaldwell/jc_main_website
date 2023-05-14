@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+{% block active %}    
+<div class="collapse navbar-collapse navbar-dropdown" id="myNavbar">
+  <ul class="nav navbar-nav">
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <li class="active"><a href="{% url 'career' %}">Career</a></li>
+    <li><a href="{% url 'hobbies' %}">Hobbies</a></li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
+    <li><a href="{% url 'login' %}">Login</a></li>
+  </ul>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<div class="container-fluid content floating-box">
+  <img class="logo_inv_2" src="{% static "assets/jc_logo_inv.png"%}" alt="Inv Logo">
+    <h3 class="centered-text">"Education is the passport to the future,<br> for tomorrow belongs to those who prepare for it today." - Malcolm X</h3>
+      
+    <div style="padding-bottom: 10px;">
+        <ul class="nav-links centered-text">
+          <li><a href="{% url 'stiles' %}">Stiles Machinery</a></li>
+          <li><a href="{% url 'classy' %}">Classy Closets</a></li>
+          <li><a href="{% url 'five_star' %}">Five Star Golf</a></li>
+          <li><a href="{% url 'mfg' %}">4J Manufacturing</a></li>
+          <li><a style="color: white;" href="{% url 'education' %}">Education</a></li>
+        </ul>
+      </div>
+
+    <h1>Education</h1>
+      <p class="centered-text">2013: High School Diploma - 4J Christian Academy</p>
+      <p class="centered-text">2011 - 2013: Engineering - Advanced Technology Complex</p>
+      <p class="centered-text">2012 - 2013: Basic Studies - North Central Texas College</p>
+    
+    
+</div>
+{% endblock %}

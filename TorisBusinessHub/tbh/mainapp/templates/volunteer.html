@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+{% block active %}    
+<div class="collapse navbar-collapse navbar-dropdown" id="myNavbar">
+  <ul class="nav navbar-nav">
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <li><a href="{% url 'career' %}">Career</a></li>
+    <li class="active"><a href="{% url 'hobbies' %}">Hobbies</a></li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
+    <li><a href="{% url 'login' %}">Login</a></li>
+  </ul>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<div class="container-fluid content floating-box">
+  <img class="logo_inv_2" src="{% static "assets/jc_logo_inv.png"%}" alt="Inv Logo">
+    <h3 class="centered-text">"Each of you should use whatever gift you have received to serve others, <br> as faithful stewards of God’s grace in its various forms." - 1 Peter 4:10</h3>
+      
+    <div style="padding-bottom: 10px;">
+        <ul class="nav-links centered-text">
+          <li><a href="{% url 'hunting' %}">Hunting</a></li>
+          <li><a href="{% url 'fishing' %}">Fishing</a></li>
+          <li><a href="{% url 'automotive' %}">Automotive</a></li>
+          <li><a href="{% url 'electronics' %}">Electronics</a></li>
+          <li><a href="{% url 'photography' %}">Photography</a></li>
+          <li><a style="color: white;" href="{% url 'volunteer' %}">Volunteer</a></li>
+        </ul>
+      </div>
+
+    <h1>Volunteering!</h1>
+      <p class="centered-text">2016 - Present: Security - Volunteer - Heartland Church</p>
+      <p class="centered-text">2009 - 2016: Designed and built stage sets - Volunteer - Heartland Church</p>
+    
+    
+</div>
+{% endblock %}

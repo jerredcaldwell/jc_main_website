@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% block active %}    
+<div class="collapse navbar-collapse navbar-dropdown" id="myNavbar">
+  <ul class="nav navbar-nav">
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <li class="active"><a href="{% url 'career' %}">Career</a></li>
+    <li><a href="{% url 'hobbies' %}">Hobbies</a></li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
+    <li><a href="{% url 'login' %}">Login</a></li>
+  </ul>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<div class="container-fluid content floating-box">
+  <img class="logo_inv_2" src="{% static "assets/jc_logo_inv.png"%}" alt="Inv Logo">
+    <h3 class="centered-text">"We are a network of passionate and experienced professionals<br>dedicated to the advancement of manufacturers everywhere." - Stiles Machinery</h3>
+      
+    <div style="padding-bottom: 10px;">
+        <ul class="nav-links centered-text">
+          <li><a style="color: white;" href="{% url 'stiles' %}">Stiles Machinery</a></li>
+          <li><a href="{% url 'classy' %}">Classy Closets</a></li>
+          <li><a href="{% url 'five_star' %}">Five Star Golf</a></li>
+          <li><a href="{% url 'mfg' %}">4J Manufacturing</a></li>
+          <li><a href="{% url 'education' %}">Education</a></li>
+        </ul>
+      </div>
+
+    <h1>Stiles</h1>
+    <p class="centered-text">2022: Field Service Representative - Stiles Machinery</p>
+    
+    
+</div>
+{% endblock %}

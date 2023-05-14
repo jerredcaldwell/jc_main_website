@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+{% block active %}    
+<div class="collapse navbar-collapse navbar-dropdown" id="myNavbar">
+  <ul class="nav navbar-nav">
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <li><a href="{% url 'career' %}">Career</a></li>
+    <li><a href="{% url 'hobbies' %}">Hobbies</a></li>
+    <li><a href="{% url 'contact' %}">Contact</a></li>
+    <li class="active"><a href="{% url 'login' %}">Login</a></li>
+  </ul>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<div class="container-fluid content floating-box">
+  <img class="logo_inv_1" src="{% static "assets/jc_logo_inv.png"%}" alt="Inv Logo">
+    <h1 id="heading-text" class="centered-text"></h1>
+    <p id="p1-text" class="centered-text"></p>
+    <p id="p2-text" class="centered-text"></p>
+    <div></div>
+</div>
+
+<script type="text/javascript">
+  var i=0, text;
+  var headingText = "Access Denied!";
+  var p1Text = "User:";
+  var p2Text = "Password:";
+ 
+  function typing() {
+    if(i<headingText.length){
+      document.getElementById("heading-text").innerHTML += headingText.charAt(i);
+      i++;
+      setTimeout(typing,80);
+    } else if (i<headingText.length + p1Text.length) {
+      document.getElementById("p1-text").innerHTML += p1Text.charAt(i - headingText.length);
+      i++;
+      setTimeout(typing,80);
+    } else if (i<headingText.length + p1Text.length + p2Text.length) {
+      document.getElementById("p2-text").innerHTML += p2Text.charAt(i - headingText.length - p1Text.length);
+      i++;
+      setTimeout(typing,80);
+    }
+  }
+  typing();
+</script>
+{% endblock %}
