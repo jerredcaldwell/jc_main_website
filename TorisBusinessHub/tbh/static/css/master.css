@@ -104,6 +104,10 @@ footer {
     border-radius: 10px;
 }
 
+.floating-box::-webkit-scrollbar {
+  display: none;
+}
+
 @media (max-width: 767px) {
     .navbar,
     .footer {
