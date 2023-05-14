@@ -281,3 +281,31 @@ h3.centered-text {
 .navbar-toggle {
   margin-top: 3px;
 }
+
+.image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .image-container {
+    flex-direction: column;
+    width: auto;
+    height: 70%;
+  }
+}
+
+.limg {
+  padding: 5px;
+  width: 500px;
+  height: 350px;
+  max-width: 100%;
+}
+
+.rimg {
+  padding: 5px;
+  width: 500px;
+  height: 350px;
+  max-width: 100%;
+}
