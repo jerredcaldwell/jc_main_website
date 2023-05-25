@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
-{% block active %}    
+
+{% block active %}
+
 <div class="collapse navbar-collapse navbar-dropdown" id="myNavbar">
   <ul class="nav navbar-nav">
     <li><a href="{% url 'home' %}">Home</a></li>
@@ -10,52 +12,63 @@
     <li><a href="{% url 'login' %}">Login</a></li>
   </ul>
 </div>
+
 {% endblock %}
 
 
 {% block content %}
+
 <div class="container-fluid content floating-box">
   <img class="logo_inv_2" src="{% static "assets/jc_logo_inv.png"%}" alt="Inv Logo">
-    <h3 class="centered-text">"Life Organized"<br> - Classy Closets</h3>
-      
-    <div style="padding-bottom: 10px;">
-        <ul class="nav-links centered-text">
-          <li><a href="{% url 'stiles' %}">Stiles Machinery</a></li>
-          <li><a style="color: white;" href="{% url 'classy' %}">Classy Closets</a></li>
-          <li><a href="{% url 'five_star' %}">Five Star Golf</a></li>
-          <li><a href="{% url 'mfg' %}">4J Manufacturing</a></li>
-          <li><a href="{% url 'education' %}">Education</a></li>
-        </ul>
-      </div>
+  <h3 class="centered-text">"Life Organized"<br> - Classy Closets</h3>      
+    
+  <div style="padding-bottom: 10px;">
+    <ul class="nav-links centered-text">
+      <li><a href="{% url 'stiles' %}">Stiles Machinery</a></li>
+      <li><a style="color: white;" href="{% url 'classy' %}">Classy Closets</a></li>
+      <li><a href="{% url 'five_star' %}">Five Star Golf</a></li>
+      <li><a href="{% url 'mfg' %}">4J Manufacturing</a></li>
+      <li><a href="{% url 'education' %}">Education</a></li>
+    </ul>
+  </div>
 
-    <h1>Classy Closets</h1>
-    <p class="centered-text">2014 - 2022: Manager - Classy Closets</p>
-    <p class="centered-text">2022: Engineered an Enterprise Resource Planning(ERP) software
-    with Python, Django, and AWS - Classy Closets</p>
-    <p class="centered-text">2021: Wrote Python scripts to automate manufacturing - Classy Closets</p>
-    <p class="centered-text">2015 - 2020: Engineered manafacturing process and
-    standard operating procedures - Classy Closets</p>
-    <p class="centered-text">2014 - 2015: Constructed custom cabinetry - Classy Closets</p>
 
-    <div class="image-container">
-      <img class="limg" src="{% static "assets/classy/Mitchell_Office.jpg"%}" alt="Office Picture">
-        <img class="rimg" src="{% static "assets/classy/Ernst_Master2.jpg"%}" alt="Closet Picture">
-        
-    </div>
-    <div class="image-container">
-      <img class="limg" src="{% static "assets/classy/Thomas_Master2.jpg"%}" alt="Closet Picture">
-      <img class="rimg" src="{% static "assets/classy/Wallbed_Display.jpg"%}" alt="Office Picture">
+  <h1>Classy Closets</h1>
+  <p class="centered-text"><u>2014 - 2022: Manager - Classy Closets</u></p>
+  <p class="centered-text">In 2014 I started as an installer, installing a variety of custom cabinets.</p>
+  <p class="centered-text">Worked on residential and commercial projects.</p>
+  <p class="centered-text">In 2015 I engineered a full production line and became the primary operator for all manufacturing.</p>
+  <p class="centered-text">Served on the design team and engineered project blueprints to customer specifications.</p>
+  <p class="centered-text">Created standard production procedures and maintenance guidelines.</p>
+  <p class="centered-text">Started training other machine operators on our process and increased efficiencies.</p>
+  <p class="centered-text">In 2018 I developed the company IT strategy and integrated the network of computers and machinery.</p>
+  <p class="centered-text">Was the admin of the Ubiquiti network and Microsoft cloud systems.</p>
+  <p class="centered-text">In 2020 I took the time to teach myself Python and other computer skills to utilize in manufacturing.</p>
+  <p class="centered-text">Created an inventory barcode system, and program for production engineering using Python.</p>
+  <p class="centered-text">Architected and engineered an Enterprise Resource Planner(ERP) using Django, Python, and AWS.</p>
+  <p class="centered-text">Troubleshot problems and maximed effeciency and scalability of ERP server.</p>
+
+  <div class="image-container">
+    <img class="limg" src="{% static "assets/classy/Mitchell_Office.jpg"%}" alt="Office Picture">
+    <img class="rimg" src="{% static "assets/classy/Ernst_Master2.jpg"%}" alt="Closet Picture">        
+  </div>
+  <div class="image-container">
+    <img class="limg" src="{% static "assets/classy/Thomas_Master2.jpg"%}" alt="Closet Picture">
+    <img class="rimg" src="{% static "assets/classy/Wallbed_Display.jpg"%}" alt="Office Picture">
   </div>
   <div class="image-container">
     <img class="limg" src="{% static "assets/classy/ambitions.jpg"%}" alt="Closet Picture">
     <img class="rimg" src="{% static "assets/classy/ambitions_bhx.jpg"%}" alt="Office Picture">
-</div>
-<div class="image-container">
-  <img class="limg" src="{% static "assets/classy/sawteq.jpg"%}" alt="Closet Picture">
-  <img class="rimg" src="{% static "assets/classy/paint_room.jpg"%}" alt="Office Picture">
-</div>
-<br>
-<p class="centered-text"><a href="{% url 'classy' %}">Top of Page</a></p>
+  </div>
+  <div class="image-container">
+    <img class="limg" src="{% static "assets/classy/sawteq.jpg"%}" alt="Closet Picture">
+    <img class="rimg" src="{% static "assets/classy/paint_room.jpg"%}" alt="Office Picture">
+  </div>
+
+  <br>
+
+  <p class="centered-text"><a href="{% url 'classy' %}">Top of Page</a></p>
     
 </div>
+
 {% endblock %}
