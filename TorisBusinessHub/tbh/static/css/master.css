@@ -249,7 +249,7 @@ h3.centered-text {
 
 /* styles for desktop */
 h4.centered-text {
-  color: #fa0000;
+  color: #39ff14;
   padding-bottom: 10px;
   margin-top: -75px;
   text-shadow:
@@ -357,6 +357,7 @@ h4.centered-text {
   width: 500px;
   height: 350px;
   max-width: 100%;
+  box-shadow: 0 0 5px #50ff31;
 }
 
 .rimg {
@@ -364,4 +365,22 @@ h4.centered-text {
   width: 500px;
   height: 350px;
   max-width: 100%;
+  box-shadow: 0 0 5px #50ff31;
+}
+
+@keyframes twist-effect {
+  0%, 100% {
+    transform: rotate(0deg) skew(0deg);
+  }
+  50% {
+    transform: rotate(2.5deg) skew(12deg);
+  }
+}
+
+.wave-text {
+  animation: twist-effect 5s infinite;
+}
+
+#tiltImage {
+  transition: transform 0.3s;
 }

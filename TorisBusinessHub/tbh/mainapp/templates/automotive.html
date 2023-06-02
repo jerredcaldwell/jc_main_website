@@ -16,7 +16,7 @@
 {% block content %}
 <div class="container-fluid content floating-box">
   <img class="logo_inv_2" src="{% static "assets/jc_logo_inv.png"%}" alt="Inv Logo">
-    <h4 class="centered-text">"I've never been a collector of cars. <br> I've always been a builder of cars." - Caroll Shelby</h4>
+    <h4 class="centered-text wave-text">"I've never been a collector of cars. <br> I've always been a builder of cars." - Caroll Shelby</h4>
       
     <div style="padding-bottom: 10px;">
         <ul class="nav-links centered-text">
@@ -31,7 +31,37 @@
 
     <h1>Automotive!</h1>
       <p class="centered-text">I like to drive. :P</p>
+
+      <div class="image-container">
+        <img class="tiltImage limg" src="{% static "assets/automotive/mustang_sand.jpg"%}" alt="hunt1">
+        <img class="tiltImage rimg" src="{% static "assets/automotive/mustang_engine.jpg"%}" alt="hunt2">        
+      </div>
+      <div class="image-container">
+        <img class="tiltImage limg" src="{% static "assets/automotive/gmc.jpg"%}" alt="hunt1">
+        <img class="tiltImage rimg" src="{% static "assets/automotive/f150.jpg"%}" alt="hunt2">        
+      </div>
     
     
 </div>
+
+<script>
+  window.onload = function() {
+    var images = document.getElementsByClassName('tiltImage');
+
+    for (var i = 0; i < images.length; i++) {
+        images[i].addEventListener('mousemove', function(e) {
+            const { offsetWidth: width, offsetHeight: height } = this;
+            const { offsetX: mouseX, offsetY: mouseY } = e;
+            const xTilt = (mouseX / width - 0.5) * 10;
+            const yTilt = (mouseY / height - 0.5) * 10;
+
+            this.style.transform = `rotateX(${yTilt}deg) rotateY(${xTilt}deg)`;
+        });
+
+        images[i].addEventListener('mouseleave', function(e) {
+            this.style.transform = '';
+        });
+    }
+  }
+</script>
 {% endblock %}

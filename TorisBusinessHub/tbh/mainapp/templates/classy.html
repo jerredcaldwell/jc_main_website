@@ -20,7 +20,7 @@
 
 <div class="container-fluid content floating-box">
   <img class="logo_inv_2" src="{% static "assets/jc_logo_inv.png"%}" alt="Inv Logo">
-  <h4 class="centered-text">"Life Organized"<br> - Classy Closets</h4>      
+  <h4 class="centered-text wave-text">"Life Organized"<br> - Classy Closets</h4>      
     
   <div style="padding-bottom: 25px;">
     <ul class="nav-links centered-text">
@@ -48,20 +48,20 @@
   <p class="centered-text">Troubleshot problems and maximed effeciency and scalability of ERP server.</p>
   <br>
   <div class="image-container">
-    <img class="limg" src="{% static "assets/classy/Mitchell_Office.jpg"%}" alt="Office Picture">
-    <img class="rimg" src="{% static "assets/classy/Ernst_Master2.jpg"%}" alt="Closet Picture">        
+    <img class="limg tiltImage" src="{% static "assets/classy/Mitchell_Office.jpg"%}" alt="Office Picture">
+    <img class="rimg tiltImage" src="{% static "assets/classy/Ernst_Master2.jpg"%}" alt="Closet Picture">        
   </div>
   <div class="image-container">
-    <img class="limg" src="{% static "assets/classy/Thomas_Master2.jpg"%}" alt="Closet Picture">
-    <img class="rimg" src="{% static "assets/classy/Wallbed_Display.jpg"%}" alt="Office Picture">
+    <img class="limg tiltImage" src="{% static "assets/classy/Thomas_Master2.jpg"%}" alt="Closet Picture">
+    <img class="rimg tiltImage" src="{% static "assets/classy/Wallbed_Display.jpg"%}" alt="Office Picture">
   </div>
   <div class="image-container">
-    <img class="limg" src="{% static "assets/classy/ambitions.jpg"%}" alt="Closet Picture">
-    <img class="rimg" src="{% static "assets/classy/ambitions_bhx.jpg"%}" alt="Office Picture">
+    <img class="limg tiltImage" src="{% static "assets/classy/ambitions.jpg"%}" alt="Closet Picture">
+    <img class="rimg tiltImage" src="{% static "assets/classy/ambitions_bhx.jpg"%}" alt="Office Picture">
   </div>
   <div class="image-container">
-    <img class="limg" src="{% static "assets/classy/sawteq.jpg"%}" alt="Closet Picture">
-    <img class="rimg" src="{% static "assets/classy/paint_room.jpg"%}" alt="Office Picture">
+    <img class="limg tiltImage" src="{% static "assets/classy/sawteq.jpg"%}" alt="Closet Picture">
+    <img class="rimg tiltImage" src="{% static "assets/classy/paint_room.jpg"%}" alt="Office Picture">
   </div>
 
   <br>
@@ -69,5 +69,26 @@
   <p class="centered-text"><a href="{% url 'classy' %}">Top of Page</a></p>
     
 </div>
+
+<script>
+  window.onload = function() {
+    var images = document.getElementsByClassName('tiltImage');
+
+    for (var i = 0; i < images.length; i++) {
+        images[i].addEventListener('mousemove', function(e) {
+            const { offsetWidth: width, offsetHeight: height } = this;
+            const { offsetX: mouseX, offsetY: mouseY } = e;
+            const xTilt = (mouseX / width - 0.5) * 10;
+            const yTilt = (mouseY / height - 0.5) * 10;
+
+            this.style.transform = `rotateX(${yTilt}deg) rotateY(${xTilt}deg)`;
+        });
+
+        images[i].addEventListener('mouseleave', function(e) {
+            this.style.transform = '';
+        });
+    }
+  }
+</script>
 
 {% endblock %}

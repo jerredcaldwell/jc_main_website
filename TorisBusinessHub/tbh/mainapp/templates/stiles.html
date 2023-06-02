@@ -16,7 +16,7 @@
 {% block content %}
 <div class="container-fluid content floating-box">
   <img class="logo_inv_2" src="{% static "assets/jc_logo_inv.png"%}" alt="Inv Logo">
-    <h4 class="centered-text">"We are a network of passionate and experienced professionals<br>dedicated to the advancement of manufacturers everywhere." - Stiles Machinery</h4>
+    <h4 class="centered-text wave-text">"We are a network of passionate and experienced professionals<br>dedicated to the advancement of manufacturers everywhere." - Stiles Machinery</h4>
       
     <div style="padding-bottom: 25px;">
         <ul class="nav-links centered-text">
@@ -36,21 +36,42 @@
     <p class="centered-text">Trained for TLF Storeteq machines that prioritize inventory control for customers.</p>
     <p class="centered-text">Installed edgebanders(straight line and contour), CNC Centateq N-700, and TLF Storeteq.</p>
       <br>
-    <div class="image-container">
-      <img class="limg" src="{% static "assets/stiles/tlf.jpg"%}" alt="stiles1">
-        <img class="rimg" src="{% static "assets/stiles/n700.jpg"%}" alt="stiles2">
-        
-    </div>
-    <div class="image-container">
-      <img class="limg" src="{% static "assets/stiles/vector.jpg"%}" alt="stiles3">
-      <img class="rimg" src="{% static "assets/stiles/vector2.jpg"%}" alt="stiles4">
-  </div>
-  <div class="image-container">
-    <img class="limg" src="{% static "assets/stiles/yaskawa.jpg"%}" alt="stiles5">
-    <img class="rimg" src="{% static "assets/stiles/yaskawa2.jpg"%}" alt="stiles6">
-</div>
+      <div class="image-container">
+        <img class="tiltImage limg" src="{% static "assets/stiles/tlf.jpg"%}" alt="stiles1">
+        <img class="tiltImage rimg" src="{% static "assets/stiles/n700.jpg"%}" alt="stiles2">
+      </div>
+      <div class="image-container">
+        <img class="tiltImage limg" src="{% static "assets/stiles/vector.jpg"%}" alt="stiles3">
+        <img class="tiltImage rimg" src="{% static "assets/stiles/vector2.jpg"%}" alt="stiles4">
+      </div>
+      <div class="image-container">
+        <img class="tiltImage limg" src="{% static "assets/stiles/yaskawa.jpg"%}" alt="stiles5">
+        <img class="tiltImage rimg" src="{% static "assets/stiles/yaskawa2.jpg"%}" alt="stiles6">
+      </div>
 <br>
 <p class="centered-text"><a href="{% url 'stiles' %}">Top of Page</a></p>
     
 </div>
+
+<script>
+  window.onload = function() {
+    var images = document.getElementsByClassName('tiltImage');
+
+    for (var i = 0; i < images.length; i++) {
+        images[i].addEventListener('mousemove', function(e) {
+            const { offsetWidth: width, offsetHeight: height } = this;
+            const { offsetX: mouseX, offsetY: mouseY } = e;
+            const xTilt = (mouseX / width - 0.5) * 10;
+            const yTilt = (mouseY / height - 0.5) * 10;
+
+            this.style.transform = `rotateX(${yTilt}deg) rotateY(${xTilt}deg)`;
+        });
+
+        images[i].addEventListener('mouseleave', function(e) {
+            this.style.transform = '';
+        });
+    }
+  }
+</script>
+
 {% endblock %}
