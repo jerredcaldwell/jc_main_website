@@ -5,7 +5,17 @@ body {
     margin: 0;
     padding: 0;
     color: 39ff14;
-    background-color: #141414;
+    background-color: #090909;
+    background-image: url('../assets/cpu.webp');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat; 
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-repeat: repeat; 
+  }
 }
 
 /* Set the height of the content to 100% minus the height of the navbar and footer */
@@ -59,6 +69,7 @@ footer {
     left: 0;
     width: 100%;
     height: 45px;
+    font-family: 'Orbitron', sans-serif;
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -98,6 +109,7 @@ footer {
     margin: 0;
     background-color: #141414;
     color: #39ff14;
+    font-family: 'Orbitron', sans-serif;
     box-shadow: 0 0 20px #39ff14;
     z-index: -2;
     overflow-y: auto;
@@ -168,7 +180,20 @@ a:hover {
   .logo_inv_1 {
     display: block;
   margin: auto;
-  }
+  transform-origin: center center;
+  animation: gradient 2s linear infinite, rotation 8s infinite linear;
+}
+
+
+@keyframes gradient {
+  0% { background-position: 100% 0%; }
+  100% { background-position: 0% 100%; }
+}
+
+@keyframes rotation {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(1turn); }
+}
 
   .logo_inv_2 {
   height: 100px;
@@ -176,6 +201,12 @@ a:hover {
   }
 
   .centered-text {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .centered-info {
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -211,6 +242,27 @@ h3.centered-text {
 /* styles for mobile */
 @media (max-width: 767px) {
   h3.centered-text {
+    margin-top: 0;
+    padding-bottom: 10px;
+  }
+}
+
+/* styles for desktop */
+h4.centered-text {
+  color: #fa0000;
+  padding-bottom: 10px;
+  margin-top: -75px;
+  text-shadow:
+  1px 1px 0 #555,
+  2px 2px 0 #444,
+  3px 3px 0 #333,
+  4px 4px 4px rgba(0, 0, 0, 0.4),
+  0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* styles for mobile */
+@media (max-width: 767px) {
+  h4.centered-text {
     margin-top: 0;
     padding-bottom: 10px;
   }

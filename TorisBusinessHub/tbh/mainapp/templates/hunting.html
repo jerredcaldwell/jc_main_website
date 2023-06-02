@@ -16,10 +16,10 @@
 {% block content %}
 <div class="container-fluid content floating-box">
   <img class="logo_inv_2" src="{% static "assets/jc_logo_inv.png"%}" alt="Inv Logo">
-    <h3 class="centered-text">"Now then, get your quiver and bow and go out to the open country
-    <br> to hunt some wild game for me." - Genesis 27:3</h3>
+    <h4 class="centered-text">"Now then, get your quiver and bow and go out to the open country
+    <br> to hunt some wild game for me." - Genesis 27:3</h4>
       
-    <div style="padding-bottom: 10px;">
+    <div style="padding-bottom: 25px;">
         <ul class="nav-links centered-text">
           <li><a style="color: white;" href="{% url 'hunting' %}">Hunting</a></li>
           <li><a href="{% url 'fishing' %}">Fishing</a></li>
@@ -29,10 +29,11 @@
           <li><a href="{% url 'volunteer' %}">Volunteer</a></li>
         </ul>
       </div>
-
-    <h1>Hunting!</h1>
+      
       <p class="centered-text">Whitetail deer, ducks, and predators are my specialty.</p>
       <p class="centered-text">Firearms and archery mastery enthusiast.</p>
+      <br>
+      
       <div class="image-container">
         <img class="limg" src="{% static "assets/hunting/land1.jpg"%}" alt="hunt1">
         <img class="rimg" src="{% static "assets/hunting/land2.jpg"%}" alt="hunt2">        

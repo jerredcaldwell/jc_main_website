@@ -16,9 +16,9 @@
 {% block content %}
 <div class="container-fluid content floating-box">
   <img class="logo_inv_2" src="{% static "assets/jc_logo_inv.png"%}" alt="Inv Logo">
-    <h3 class="centered-text">"If people concentrated on the really important things in life, <br> there'd be a shortage of fishing poles." - Bill Dance</h3>
+    <h4 class="centered-text">"If people concentrated on the really important things in life, <br> there'd be a shortage of fishing poles." - Bill Dance</h4>
       
-    <div style="padding-bottom: 10px;">
+    <div style="padding-bottom: 25px;">
         <ul class="nav-links centered-text">
           <li><a href="{% url 'hunting' %}">Hunting</a></li>
           <li><a style="color: white;" href="{% url 'fishing' %}">Fishing</a></li>
@@ -29,9 +29,10 @@
         </ul>
       </div>
 
-    <h1>Fishing!</h1>
       <p class="centered-text">I grew up freshwater fishing for largemouth bass, crappie, and catfish.</p>
       <p class="centered-text">Saltwater offhsore, flyfishing, and bowfishing are very enjoyable as well!</p>
+      <br>
+      
       <div class="image-container">
         <img class="limg" src="{% static "assets/fishing/colorado.jpg"%}" alt="fish1">
         <img class="rimg" src="{% static "assets/fishing/lake1.jpg"%}" alt="fish2">        
