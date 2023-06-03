@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-qqj(mf7-x+8z*!l^39z7gs0c7foqa^n!72_9@y@82x727gnxz^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['jerredcaldwell.herokuapp.com']
+ALLOWED_HOSTS = ['jerredcaldwell.herokuapp.com', '127.0.0.1:8000', '127.0.0.1']
 # ...
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
