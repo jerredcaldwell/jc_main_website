@@ -1,1 +1,1 @@
-web: gunicorn jc_main_website.wsgi --log-file -
+web: gunicorn tbh.wsgi --log-file -
